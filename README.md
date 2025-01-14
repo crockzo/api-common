@@ -1,0 +1,1 @@
+**Course-Common** it is a library used to provide basic and common functionality to be used across other microservices or library.
