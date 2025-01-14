@@ -1,5 +1,6 @@
 package com.courses.common.exception;
 
+import static com.courses.common.exception.ExceptionConstants.API_ERROR_MESSAGE;
 import static com.courses.common.exception.ExceptionConstants.HTTP_STATUS;
 import static com.courses.common.exception.ExceptionConstants.KEY_VALUE_SEPARATOR;
 import static com.courses.common.exception.ExceptionConstants.LOG_ERROR_MESSAGE;
@@ -48,27 +49,32 @@ public class BaseException extends RuntimeException {
         .append(MESSAGE_SEPARATOR);
 
     stringBuilder
+        .append(HTTP_STATUS)
+        .append(KEY_VALUE_SEPARATOR)
+        .append(this.exceptionInfo.getHttpStatusCode().value())
+        .append(MESSAGE_SEPARATOR);
+
+    stringBuilder
         .append(LOG_ERROR_MESSAGE)
         .append(KEY_VALUE_SEPARATOR)
         .append(this.exceptionInfo.getLogErrorMessage())
         .append(MESSAGE_SEPARATOR);
 
     stringBuilder
-        .append(HTTP_STATUS)
+        .append(API_ERROR_MESSAGE)
         .append(KEY_VALUE_SEPARATOR)
-        .append(this.exceptionInfo.getHttpStatusCode().value())
+        .append(this.exceptionInfo.getApiErrorMessage())
         .append(MESSAGE_SEPARATOR);
 
     Map<String, String> logParamMap =
         Optional.ofNullable(this.exceptionInfo.getLogParams()).orElse(new HashMap<>());
     stringBuilder
         .append(LOG_PARAMS)
-        .append(MESSAGE_SEPARATOR)
+        .append(KEY_VALUE_SEPARATOR)
         .append(
             logParamMap.entrySet().stream()
                 .map(entry -> entry.getKey() + KEY_VALUE_SEPARATOR + entry.getValue())
-                .collect(Collectors.joining(",")))
-        .append(MESSAGE_SEPARATOR);
+                .collect(Collectors.joining(",")));
 
     return stringBuilder.toString();
   }
