@@ -1,9 +1,9 @@
-package com.courses.common.exception.util;
+package api.common.exception.util;
 
-import com.courses.common.exception.BaseException;
-import com.courses.common.exception.CriticalTypeException;
-import com.courses.common.exception.ExceptionInfo;
-import com.courses.common.exception.NonCriticalTypeException;
+import api.common.exception.BaseException;
+import api.common.exception.CriticalTypeException;
+import api.common.exception.ExceptionInfo;
+import api.common.exception.NonCriticalTypeException;
 import java.util.List;
 import java.util.Map;
 import lombok.AccessLevel;

@@ -1,4 +1,4 @@
-package com.courses.common.exception;
+package api.common.exception;
 
 import java.util.List;
 import java.util.Map;

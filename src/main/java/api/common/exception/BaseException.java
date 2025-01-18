@@ -1,11 +1,11 @@
-package com.courses.common.exception;
+package api.common.exception;
 
-import static com.courses.common.exception.ExceptionConstants.API_ERROR_MESSAGE;
-import static com.courses.common.exception.ExceptionConstants.HTTP_STATUS;
-import static com.courses.common.exception.ExceptionConstants.KEY_VALUE_SEPARATOR;
-import static com.courses.common.exception.ExceptionConstants.LOG_ERROR_MESSAGE;
-import static com.courses.common.exception.ExceptionConstants.LOG_PARAMS;
-import static com.courses.common.exception.ExceptionConstants.MESSAGE_SEPARATOR;
+import static api.common.exception.ExceptionConstants.API_ERROR_MESSAGE;
+import static api.common.exception.ExceptionConstants.HTTP_STATUS;
+import static api.common.exception.ExceptionConstants.KEY_VALUE_SEPARATOR;
+import static api.common.exception.ExceptionConstants.LOG_ERROR_MESSAGE;
+import static api.common.exception.ExceptionConstants.LOG_PARAMS;
+import static api.common.exception.ExceptionConstants.MESSAGE_SEPARATOR;
 
 import java.util.HashMap;
 import java.util.Map;
