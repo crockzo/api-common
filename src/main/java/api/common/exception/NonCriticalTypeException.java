@@ -1,4 +1,4 @@
-package com.courses.common.exception;
+package api.common.exception;
 
 /**
  * All the client related exception should extend NonCriticalTypeException.<br>

@@ -1,9 +1,9 @@
-package com.courses.common.controller;
+package api.common.controller;
 
-import com.courses.common.exception.BaseException;
-import com.courses.common.exception.CriticalTypeException;
-import com.courses.common.exception.ExceptionInfo;
-import com.courses.common.exception.model.ErrorResponse;
+import api.common.exception.BaseException;
+import api.common.exception.CriticalTypeException;
+import api.common.exception.ExceptionInfo;
+import api.common.exception.model.ErrorResponse;
 import java.util.Optional;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

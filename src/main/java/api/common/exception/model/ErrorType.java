@@ -1,4 +1,4 @@
-package com.courses.common.exception.model;
+package api.common.exception.model;
 
 import lombok.Getter;
 
