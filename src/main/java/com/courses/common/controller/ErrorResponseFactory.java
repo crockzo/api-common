@@ -15,7 +15,7 @@ import org.springframework.http.HttpStatus;
 public class ErrorResponseFactory {
 
   public static ErrorResponse createErrorResponse(CriticalTypeException exception) {
-    log.debug(exception.getErrorMessage());
+    log.error(exception.getErrorMessage());
     ExceptionInfo exceptionInfo = exception.getExceptionInfo();
     return ErrorResponse.builder()
         .code(
@@ -27,7 +27,7 @@ public class ErrorResponseFactory {
   }
 
   public static ErrorResponse createErrorResponse(BaseException exception) {
-    log.debug(exception.getErrorMessage());
+    log.error(exception.getErrorMessage());
     ExceptionInfo exceptionInfo = exception.getExceptionInfo();
     return ErrorResponse.builder()
         .code(exceptionInfo.getHttpStatusCode())
