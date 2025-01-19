@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 @ToString
 public class ExceptionInfo {
   private HttpStatus httpStatusCode;
+  private String errorType;
   private String logErrorMessage;
   private String apiErrorMessage;
   private Map<String, String> logParams;

@@ -21,6 +21,7 @@ public class ErrorResponseFactory {
         .code(
             Optional.ofNullable(exceptionInfo.getHttpStatusCode())
                 .orElse(HttpStatus.INTERNAL_SERVER_ERROR))
+        .type(exceptionInfo.getErrorType())
         .message(exceptionInfo.getApiErrorMessage())
         .fields(exceptionInfo.getFields())
         .build();
@@ -31,6 +32,7 @@ public class ErrorResponseFactory {
     ExceptionInfo exceptionInfo = exception.getExceptionInfo();
     return ErrorResponse.builder()
         .code(exceptionInfo.getHttpStatusCode())
+        .type(exceptionInfo.getErrorType())
         .message(exceptionInfo.getApiErrorMessage())
         .fields(exceptionInfo.getFields())
         .build();
@@ -39,6 +41,7 @@ public class ErrorResponseFactory {
   public static ErrorResponse createErrorResponse(ExceptionInfo exceptionInfo) {
     return ErrorResponse.builder()
         .code(exceptionInfo.getHttpStatusCode())
+        .type(exceptionInfo.getErrorType())
         .message(exceptionInfo.getApiErrorMessage())
         .fields(exceptionInfo.getFields())
         .build();
