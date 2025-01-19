@@ -23,7 +23,7 @@ public class ErrorResponse {
   private String message;
 
   /** (optional) Error type */
-  private ErrorType type;
+  private String type;
 
   /** (optional) Additional details or action items that the client can take to resolve it. */
   private String details;
