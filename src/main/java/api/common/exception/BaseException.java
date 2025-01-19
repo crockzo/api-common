@@ -1,6 +1,8 @@
 package api.common.exception;
 
 import static api.common.exception.ExceptionConstants.API_ERROR_MESSAGE;
+import static api.common.exception.ExceptionConstants.EMPTY;
+import static api.common.exception.ExceptionConstants.EXCEPTION;
 import static api.common.exception.ExceptionConstants.HTTP_STATUS;
 import static api.common.exception.ExceptionConstants.KEY_VALUE_SEPARATOR;
 import static api.common.exception.ExceptionConstants.LOG_ERROR_MESSAGE;
@@ -22,8 +24,9 @@ public class BaseException extends RuntimeException {
   private String type;
 
   public BaseException(ExceptionInfo exceptionInfo, String type) {
+    super(exceptionInfo.getException());
     this.exceptionInfo = exceptionInfo;
-    this.type = type + "$" + this.getClass().getSimpleName();
+    this.type = type + "$" + this.getClass().getSimpleName().replace(EXCEPTION, EMPTY);
     this.errorMessage = buildErrorMessage();
   }
 
